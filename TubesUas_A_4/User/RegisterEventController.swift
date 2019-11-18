@@ -15,6 +15,10 @@ class RegisterEventController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func RegisterBtn(_ sender: Any) {
+    }
     
-
+    @IBAction func CancelBtn(_ sender: Any) {
+    }
+    
 }

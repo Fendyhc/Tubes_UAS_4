@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="2532" y="-966"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Event Controller-->
         <scene sceneID="KPk-h9-RN0">
             <objects>
-                <viewController id="Lhd-Jm-fH6" sceneMemberID="viewController">
+                <viewController id="Lhd-Jm-fH6" customClass="RegisterEventController" customModule="TubesUas_A_4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HUL-oI-yN5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,6 +193,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="RegisterBtn:" destination="Lhd-Jm-fH6" eventType="touchUpInside" id="uyy-PH-kn3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNX-wf-xqI">
                                 <rect key="frame" x="20" y="809" width="141" height="53"/>
@@ -202,6 +205,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="CancelBtn:" destination="Lhd-Jm-fH6" eventType="touchUpInside" id="n5n-r6-1lW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.41839230060577393" green="0.44280564785003662" blue="0.84895581007003784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
