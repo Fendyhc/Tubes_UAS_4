@@ -9,8 +9,7 @@
 import UIKit
 
 class UserEditProfileController: UIViewController {
-//test fendy
-//test ary
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
