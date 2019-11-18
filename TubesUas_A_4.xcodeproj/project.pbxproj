@@ -23,6 +23,19 @@
 		9839C544238263FA009BA215 /* AdminDaftarEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C543238263FA009BA215 /* AdminDaftarEventController.swift */; };
 		9839C54623826409009BA215 /* AdminDaftarUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C54523826409009BA215 /* AdminDaftarUserController.swift */; };
 		9839C5482382645E009BA215 /* AdminConfrimEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C5472382645E009BA215 /* AdminConfrimEventController.swift */; };
+		9839C54A238267D0009BA215 /* DaftarMenungguConfirmEOController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C549238267D0009BA215 /* DaftarMenungguConfirmEOController.swift */; };
+		9839C54C238267E8009BA215 /* DaftarPesertaEOController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C54B238267E8009BA215 /* DaftarPesertaEOController.swift */; };
+		9839C54E238267FF009BA215 /* EOProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C54D238267FF009BA215 /* EOProfileController.swift */; };
+		9839C550238272F5009BA215 /* EOEditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C54F238272F5009BA215 /* EOEditProfileController.swift */; };
+		9839C55223827340009BA215 /* UserMyTicketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C55123827340009BA215 /* UserMyTicketController.swift */; };
+		9839C55423827368009BA215 /* UserDaftarTransaksiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C55323827368009BA215 /* UserDaftarTransaksiController.swift */; };
+		9839C5562382738E009BA215 /* UserConfirmPembayaran1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C5552382738E009BA215 /* UserConfirmPembayaran1Controller.swift */; };
+		9839C558238273A0009BA215 /* UserConfirmPembayaran2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C557238273A0009BA215 /* UserConfirmPembayaran2Controller.swift */; };
+		9839C55A238273CB009BA215 /* UserDetailPembayaranController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C559238273CB009BA215 /* UserDetailPembayaranController.swift */; };
+		9839C55C23827413009BA215 /* UserEditPembayaranController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C55B23827413009BA215 /* UserEditPembayaranController.swift */; };
+		9839C55E2382744D009BA215 /* UserEventDeskripsiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C55D2382744D009BA215 /* UserEventDeskripsiController.swift */; };
+		9839C5602382745E009BA215 /* UserKonfirmasiPembelianController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C55F2382745E009BA215 /* UserKonfirmasiPembelianController.swift */; };
+		9839C5622382749D009BA215 /* UserKonfirmasiRegistrasiEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C5612382749D009BA215 /* UserKonfirmasiRegistrasiEventController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +57,19 @@
 		9839C543238263FA009BA215 /* AdminDaftarEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDaftarEventController.swift; sourceTree = "<group>"; };
 		9839C54523826409009BA215 /* AdminDaftarUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDaftarUserController.swift; sourceTree = "<group>"; };
 		9839C5472382645E009BA215 /* AdminConfrimEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminConfrimEventController.swift; sourceTree = "<group>"; };
+		9839C549238267D0009BA215 /* DaftarMenungguConfirmEOController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarMenungguConfirmEOController.swift; sourceTree = "<group>"; };
+		9839C54B238267E8009BA215 /* DaftarPesertaEOController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarPesertaEOController.swift; sourceTree = "<group>"; };
+		9839C54D238267FF009BA215 /* EOProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOProfileController.swift; sourceTree = "<group>"; };
+		9839C54F238272F5009BA215 /* EOEditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOEditProfileController.swift; sourceTree = "<group>"; };
+		9839C55123827340009BA215 /* UserMyTicketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMyTicketController.swift; sourceTree = "<group>"; };
+		9839C55323827368009BA215 /* UserDaftarTransaksiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDaftarTransaksiController.swift; sourceTree = "<group>"; };
+		9839C5552382738E009BA215 /* UserConfirmPembayaran1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfirmPembayaran1Controller.swift; sourceTree = "<group>"; };
+		9839C557238273A0009BA215 /* UserConfirmPembayaran2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfirmPembayaran2Controller.swift; sourceTree = "<group>"; };
+		9839C559238273CB009BA215 /* UserDetailPembayaranController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailPembayaranController.swift; sourceTree = "<group>"; };
+		9839C55B23827413009BA215 /* UserEditPembayaranController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditPembayaranController.swift; sourceTree = "<group>"; };
+		9839C55D2382744D009BA215 /* UserEventDeskripsiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventDeskripsiController.swift; sourceTree = "<group>"; };
+		9839C55F2382745E009BA215 /* UserKonfirmasiPembelianController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKonfirmasiPembelianController.swift; sourceTree = "<group>"; };
+		9839C5612382749D009BA215 /* UserKonfirmasiRegistrasiEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKonfirmasiRegistrasiEventController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +124,15 @@
 				59D586C2237EA3EC00790B6B /* UserProfileController.swift */,
 				59D586C4237EA40600790B6B /* UserEditProfileController.swift */,
 				9839C53F2382597A009BA215 /* RegisterEventController.swift */,
+				9839C55123827340009BA215 /* UserMyTicketController.swift */,
+				9839C55323827368009BA215 /* UserDaftarTransaksiController.swift */,
+				9839C5552382738E009BA215 /* UserConfirmPembayaran1Controller.swift */,
+				9839C557238273A0009BA215 /* UserConfirmPembayaran2Controller.swift */,
+				9839C559238273CB009BA215 /* UserDetailPembayaranController.swift */,
+				9839C55B23827413009BA215 /* UserEditPembayaranController.swift */,
+				9839C55D2382744D009BA215 /* UserEventDeskripsiController.swift */,
+				9839C55F2382745E009BA215 /* UserKonfirmasiPembelianController.swift */,
+				9839C5612382749D009BA215 /* UserKonfirmasiRegistrasiEventController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -106,6 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				59D586C0237E98A100790B6B /* LoginEOController.swift */,
+				9839C549238267D0009BA215 /* DaftarMenungguConfirmEOController.swift */,
+				9839C54B238267E8009BA215 /* DaftarPesertaEOController.swift */,
+				9839C54D238267FF009BA215 /* EOProfileController.swift */,
+				9839C54F238272F5009BA215 /* EOEditProfileController.swift */,
 			);
 			path = EO;
 			sourceTree = "<group>";
@@ -192,19 +231,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9839C55C23827413009BA215 /* UserEditPembayaranController.swift in Sources */,
+				9839C55223827340009BA215 /* UserMyTicketController.swift in Sources */,
 				59D58695237E8C7400790B6B /* RegisterController.swift in Sources */,
 				59D586C1237E98A100790B6B /* LoginEOController.swift in Sources */,
+				9839C5562382738E009BA215 /* UserConfirmPembayaran1Controller.swift in Sources */,
+				9839C558238273A0009BA215 /* UserConfirmPembayaran2Controller.swift in Sources */,
 				59A4BDC2237D4BD70012F801 /* AppDelegate.swift in Sources */,
 				9839C5482382645E009BA215 /* AdminConfrimEventController.swift in Sources */,
+				9839C54A238267D0009BA215 /* DaftarMenungguConfirmEOController.swift in Sources */,
 				9839C544238263FA009BA215 /* AdminDaftarEventController.swift in Sources */,
 				9839C54623826409009BA215 /* AdminDaftarUserController.swift in Sources */,
 				59D58699237E8E3200790B6B /* DashboardController.swift in Sources */,
 				59D586C5237EA40600790B6B /* UserEditProfileController.swift in Sources */,
 				9839C542238263E0009BA215 /* AdminMenungguConfirmEventController.swift in Sources */,
 				59D586C3237EA3EC00790B6B /* UserProfileController.swift in Sources */,
+				9839C55423827368009BA215 /* UserDaftarTransaksiController.swift in Sources */,
+				9839C55E2382744D009BA215 /* UserEventDeskripsiController.swift in Sources */,
 				59D58693237E8B2700790B6B /* LoginController.swift in Sources */,
+				9839C550238272F5009BA215 /* EOEditProfileController.swift in Sources */,
 				59A4BDC4237D4BD70012F801 /* SceneDelegate.swift in Sources */,
+				9839C54E238267FF009BA215 /* EOProfileController.swift in Sources */,
+				9839C5622382749D009BA215 /* UserKonfirmasiRegistrasiEventController.swift in Sources */,
+				9839C5602382745E009BA215 /* UserKonfirmasiPembelianController.swift in Sources */,
+				9839C54C238267E8009BA215 /* DaftarPesertaEOController.swift in Sources */,
 				9839C5402382597A009BA215 /* RegisterEventController.swift in Sources */,
+				9839C55A238273CB009BA215 /* UserDetailPembayaranController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

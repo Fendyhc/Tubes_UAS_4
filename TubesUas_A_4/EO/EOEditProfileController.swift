@@ -1,5 +1,5 @@
 //
-//  RegisterEventController.swift
+//  EOEditProfileController.swift
 //  TubesUas_A_4
 //
 //  Created by Lab PK 15 on 11/18/19.
@@ -8,19 +8,18 @@
 
 import UIKit
 
-class RegisterEventController: UIViewController {
+class EOEditProfileController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func RegisterBtn(_ sender: Any) {
-        performSegue(withIdentifier: "UserConfirmRegisterEventVC", sender: self)
+
+    @IBAction func ConfirmBtn(_ sender: Any) {
+        performSegue(withIdentifier: "EOEventConfirmProfileVC", sender: self.dismiss(animated: true, completion: nil))
     }
-    
     @IBAction func CancelBtn(_ sender: Any) {
-        performSegue(withIdentifier: "BacktoDashboardVC", sender: self.dismiss(animated: true, completion: nil))
+        performSegue(withIdentifier: "EOEventConfirmProfileVC", sender: self.dismiss(animated: true, completion: nil))
     }
-    
 }
