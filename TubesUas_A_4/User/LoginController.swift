@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginController: UIViewController {
-
+    //test ary
     @IBOutlet weak var Passwordtxt: UITextField!
     @IBOutlet weak var Usernametxt: UITextField!
     override func viewDidLoad() {
