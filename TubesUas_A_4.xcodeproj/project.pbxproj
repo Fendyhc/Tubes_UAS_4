@@ -19,6 +19,10 @@
 		59D586C3237EA3EC00790B6B /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D586C2237EA3EC00790B6B /* UserProfileController.swift */; };
 		59D586C5237EA40600790B6B /* UserEditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D586C4237EA40600790B6B /* UserEditProfileController.swift */; };
 		9839C5402382597A009BA215 /* RegisterEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C53F2382597A009BA215 /* RegisterEventController.swift */; };
+		9839C542238263E0009BA215 /* AdminMenungguConfirmEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C541238263E0009BA215 /* AdminMenungguConfirmEventController.swift */; };
+		9839C544238263FA009BA215 /* AdminDaftarEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C543238263FA009BA215 /* AdminDaftarEventController.swift */; };
+		9839C54623826409009BA215 /* AdminDaftarUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C54523826409009BA215 /* AdminDaftarUserController.swift */; };
+		9839C5482382645E009BA215 /* AdminConfrimEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C5472382645E009BA215 /* AdminConfrimEventController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		59D586C2237EA3EC00790B6B /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		59D586C4237EA40600790B6B /* UserEditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditProfileController.swift; sourceTree = "<group>"; };
 		9839C53F2382597A009BA215 /* RegisterEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEventController.swift; sourceTree = "<group>"; };
+		9839C541238263E0009BA215 /* AdminMenungguConfirmEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenungguConfirmEventController.swift; sourceTree = "<group>"; };
+		9839C543238263FA009BA215 /* AdminDaftarEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDaftarEventController.swift; sourceTree = "<group>"; };
+		9839C54523826409009BA215 /* AdminDaftarUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDaftarUserController.swift; sourceTree = "<group>"; };
+		9839C5472382645E009BA215 /* AdminConfrimEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminConfrimEventController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,10 @@
 		59D586C8237EA41E00790B6B /* Admin */ = {
 			isa = PBXGroup;
 			children = (
+				9839C541238263E0009BA215 /* AdminMenungguConfirmEventController.swift */,
+				9839C543238263FA009BA215 /* AdminDaftarEventController.swift */,
+				9839C54523826409009BA215 /* AdminDaftarUserController.swift */,
+				9839C5472382645E009BA215 /* AdminConfrimEventController.swift */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -183,8 +195,12 @@
 				59D58695237E8C7400790B6B /* RegisterController.swift in Sources */,
 				59D586C1237E98A100790B6B /* LoginEOController.swift in Sources */,
 				59A4BDC2237D4BD70012F801 /* AppDelegate.swift in Sources */,
+				9839C5482382645E009BA215 /* AdminConfrimEventController.swift in Sources */,
+				9839C544238263FA009BA215 /* AdminDaftarEventController.swift in Sources */,
+				9839C54623826409009BA215 /* AdminDaftarUserController.swift in Sources */,
 				59D58699237E8E3200790B6B /* DashboardController.swift in Sources */,
 				59D586C5237EA40600790B6B /* UserEditProfileController.swift in Sources */,
+				9839C542238263E0009BA215 /* AdminMenungguConfirmEventController.swift in Sources */,
 				59D586C3237EA3EC00790B6B /* UserProfileController.swift in Sources */,
 				59D58693237E8B2700790B6B /* LoginController.swift in Sources */,
 				59A4BDC4237D4BD70012F801 /* SceneDelegate.swift in Sources */,
