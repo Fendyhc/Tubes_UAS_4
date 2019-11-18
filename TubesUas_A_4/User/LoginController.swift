@@ -10,6 +10,7 @@ import UIKit
 
 class LoginController: UIViewController {
     //test ary
+    let URL_JSON = "https://uajy-tix.xyz/REST-API/user"
     @IBOutlet weak var Passwordtxt: UITextField!
     @IBOutlet weak var Usernametxt: UITextField!
     override func viewDidLoad() {
