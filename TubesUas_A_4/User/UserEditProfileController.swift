@@ -16,4 +16,7 @@ class UserEditProfileController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func CancelBtn(_ sender: Any) {
+        performSegue(withIdentifier: "CancelEditProfileVC", sender: self)
+    }
 }
