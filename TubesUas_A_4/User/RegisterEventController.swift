@@ -1,14 +1,14 @@
 //
-//  RegisterController.swift
+//  RegisterEventController.swift
 //  TubesUas_A_4
 //
-//  Created by Lab PK 13 on 15/11/19.
+//  Created by Lab PK 15 on 11/18/19.
 //  Copyright © 2019 Fendy Heryanto Chandra, I Putu Ary Sukma Bayu, Otniel Putra Zebua. All rights reserved.
 //
 
 import UIKit
 
-class RegisterController: UIViewController {
+class RegisterEventController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +16,5 @@ class RegisterController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func LoginBtn(_ sender: Any) {
-        performSegue(withIdentifier: "LoginUserVC", sender: self.dismiss(animated: true, completion: nil ))
-    }
-    
+
 }

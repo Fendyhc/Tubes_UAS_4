@@ -17,6 +17,6 @@ class UserEditProfileController: UIViewController {
     }
     
     @IBAction func CancelBtn(_ sender: Any) {
-        performSegue(withIdentifier: "CancelEditProfileVC", sender: self)
+        performSegue(withIdentifier: "CancelEditProfileVC", sender: self.dismiss(animated: true, completion: nil))
     }
 }

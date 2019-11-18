@@ -16,10 +16,10 @@ class UserProfileController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func EditProfileBtn(_ sender: Any) {
-        performSegue(withIdentifier: "UserEditProfileBtn", sender: self)
+        performSegue(withIdentifier: "UserEditProfileVC", sender: self)
     }
     @IBAction func LogoutBtn(_ sender: Any) {
-        performSegue(withIdentifier: "UserLogoutVC", sender: self)
+        performSegue(withIdentifier: "UserLogoutVC", sender: self.dismiss(animated: true, completion: nil))
     }
     
 }

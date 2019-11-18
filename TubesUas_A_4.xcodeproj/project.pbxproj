@@ -18,6 +18,7 @@
 		59D586C1237E98A100790B6B /* LoginEOController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D586C0237E98A100790B6B /* LoginEOController.swift */; };
 		59D586C3237EA3EC00790B6B /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D586C2237EA3EC00790B6B /* UserProfileController.swift */; };
 		59D586C5237EA40600790B6B /* UserEditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D586C4237EA40600790B6B /* UserEditProfileController.swift */; };
+		9839C5402382597A009BA215 /* RegisterEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C53F2382597A009BA215 /* RegisterEventController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		59D586C0237E98A100790B6B /* LoginEOController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEOController.swift; sourceTree = "<group>"; };
 		59D586C2237EA3EC00790B6B /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		59D586C4237EA40600790B6B /* UserEditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditProfileController.swift; sourceTree = "<group>"; };
+		9839C53F2382597A009BA215 /* RegisterEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEventController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				59D58698237E8E3200790B6B /* DashboardController.swift */,
 				59D586C2237EA3EC00790B6B /* UserProfileController.swift */,
 				59D586C4237EA40600790B6B /* UserEditProfileController.swift */,
+				9839C53F2382597A009BA215 /* RegisterEventController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				59D586C3237EA3EC00790B6B /* UserProfileController.swift in Sources */,
 				59D58693237E8B2700790B6B /* LoginController.swift in Sources */,
 				59A4BDC4237D4BD70012F801 /* SceneDelegate.swift in Sources */,
+				9839C5402382597A009BA215 /* RegisterEventController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
