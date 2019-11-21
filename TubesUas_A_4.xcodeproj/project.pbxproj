@@ -36,6 +36,8 @@
 		9839C55E2382744D009BA215 /* UserEventDeskripsiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C55D2382744D009BA215 /* UserEventDeskripsiController.swift */; };
 		9839C5602382745E009BA215 /* UserKonfirmasiPembelianController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C55F2382745E009BA215 /* UserKonfirmasiPembelianController.swift */; };
 		9839C5622382749D009BA215 /* UserKonfirmasiRegistrasiEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C5612382749D009BA215 /* UserKonfirmasiRegistrasiEventController.swift */; };
+		9BFC15E32386E1EC00B2FBD4 /* MainMenuUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC15E22386E1EC00B2FBD4 /* MainMenuUserController.swift */; };
+		9BFC15E62386F33D00B2FBD4 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC15E52386F33D00B2FBD4 /* Event.swift */; };
 		D8624BCA23863D4D002314AC /* AdminProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8624BC923863D4D002314AC /* AdminProfileController.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		9839C55D2382744D009BA215 /* UserEventDeskripsiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventDeskripsiController.swift; sourceTree = "<group>"; };
 		9839C55F2382745E009BA215 /* UserKonfirmasiPembelianController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKonfirmasiPembelianController.swift; sourceTree = "<group>"; };
 		9839C5612382749D009BA215 /* UserKonfirmasiRegistrasiEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKonfirmasiRegistrasiEventController.swift; sourceTree = "<group>"; };
+		9BFC15E22386E1EC00B2FBD4 /* MainMenuUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuUserController.swift; sourceTree = "<group>"; };
+		9BFC15E52386F33D00B2FBD4 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		D8624BC923863D4D002314AC /* AdminProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProfileController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +108,7 @@
 		59A4BDC0237D4BD70012F801 /* TubesUas_A_4 */ = {
 			isa = PBXGroup;
 			children = (
+				9BFC15E42386F32500B2FBD4 /* Model */,
 				59D586C8237EA41E00790B6B /* Admin */,
 				59D586C7237EA41800790B6B /* EO */,
 				59D586C6237EA41000790B6B /* User */,
@@ -135,6 +140,7 @@
 				9839C55D2382744D009BA215 /* UserEventDeskripsiController.swift */,
 				9839C55F2382745E009BA215 /* UserKonfirmasiPembelianController.swift */,
 				9839C5612382749D009BA215 /* UserKonfirmasiRegistrasiEventController.swift */,
+				9BFC15E22386E1EC00B2FBD4 /* MainMenuUserController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -161,6 +167,14 @@
 				D8624BC923863D4D002314AC /* AdminProfileController.swift */,
 			);
 			path = Admin;
+			sourceTree = "<group>";
+		};
+		9BFC15E42386F32500B2FBD4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9BFC15E52386F33D00B2FBD4 /* Event.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,12 +260,14 @@
 				9839C544238263FA009BA215 /* AdminDaftarEventController.swift in Sources */,
 				9839C54623826409009BA215 /* AdminDaftarUserController.swift in Sources */,
 				59D58699237E8E3200790B6B /* DashboardController.swift in Sources */,
+				9BFC15E32386E1EC00B2FBD4 /* MainMenuUserController.swift in Sources */,
 				59D586C5237EA40600790B6B /* UserEditProfileController.swift in Sources */,
 				9839C542238263E0009BA215 /* AdminMenungguConfirmEventController.swift in Sources */,
 				D8624BCA23863D4D002314AC /* AdminProfileController.swift in Sources */,
 				59D586C3237EA3EC00790B6B /* UserProfileController.swift in Sources */,
 				9839C55423827368009BA215 /* UserDaftarTransaksiController.swift in Sources */,
 				9839C55E2382744D009BA215 /* UserEventDeskripsiController.swift in Sources */,
+				9BFC15E62386F33D00B2FBD4 /* Event.swift in Sources */,
 				59D58693237E8B2700790B6B /* LoginController.swift in Sources */,
 				9839C550238272F5009BA215 /* EOEditProfileController.swift in Sources */,
 				59A4BDC4237D4BD70012F801 /* SceneDelegate.swift in Sources */,

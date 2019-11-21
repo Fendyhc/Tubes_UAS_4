@@ -9,10 +9,17 @@
 import UIKit
 
 class UserProfileController: UIViewController {
-
+    var userId:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(self.userId)
+        let barViewControllers = self.tabBarController?.viewControllers
+        let dashboard = barViewControllers![0] as? DashboardController
+        let transaksi = barViewControllers![1] as? UserDaftarTransaksiController
+        let tiket = barViewControllers![2] as? UserMyTicketController
+        dashboard!.userId = self.userId
+        transaksi!.userId = self.userId
+        tiket!.userId = self.userId
         // Do any additional setup after loading the view.
     }
     @IBAction func EditProfileBtn(_ sender: Any) {

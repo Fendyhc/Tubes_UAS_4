@@ -9,7 +9,7 @@
 import UIKit
 
 class RegisterEventController: UIViewController {
-
+    var userId:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 

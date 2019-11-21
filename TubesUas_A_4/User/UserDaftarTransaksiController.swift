@@ -9,10 +9,17 @@
 import UIKit
 
 class UserDaftarTransaksiController: UIViewController {
-
+    var userId:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(self.userId)
+        let barViewControllers = self.tabBarController?.viewControllers
+        let dashboard = barViewControllers![0] as? DashboardController
+        let tiket = barViewControllers![2] as? UserMyTicketController
+        let profile = barViewControllers![3] as? UserProfileController
+        dashboard!.userId = self.userId
+        tiket!.userId = self.userId
+        profile!.userId = self.userId
         // Do any additional setup after loading the view.
     }
     

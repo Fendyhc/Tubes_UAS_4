@@ -10,7 +10,8 @@ import UIKit
 
 class LoginController: UIViewController {
     //test ary
-    let URL_JSON = "https://uajy-tix.xyz/REST-API/user"
+    let URL_Login = "https://uajytix.xyz/REST-API/user/login.php"
+    var user:[String:AnyObject] = [:]
     @IBOutlet weak var Passwordtxt: UITextField!
     @IBOutlet weak var Usernametxt: UITextField!
     override func viewDidLoad() {
@@ -19,16 +20,20 @@ class LoginController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func LoginBtn(_ sender: Any) {
-        performSegue(withIdentifier: "MainMenuUserVC", sender: self)
+        if Usernametxt.text == "admin" && Passwordtxt.text == "admin" {
+            performSegue(withIdentifier: "MainMenuAdminVC", sender: self)
+        }else{
+            postPegawai(username: Usernametxt.text ?? "", password: Passwordtxt.text ?? "")
+        }
         
     }
     
     @IBAction func SignUpBtn(_ sender: Any) {
         performSegue(withIdentifier: "RegisterVC", sender: self)
     }
-    fileprivate func postPegawai(name: String, id_number: String, birthdate:String, email:String){
-        let parameters : [String:Any] = ["name":name,"id_number": id_number,"birthdate": birthdate,"email" : email]
-        guard let url = URL(string: URL_JSON)else{
+    fileprivate func postPegawai(username: String, password: String){
+        let parameters : [String:Any] = ["username":username, "password":password]
+        guard let url = URL(string: URL_Login)else{
             return
         }
         var request = URLRequest(url: url)
@@ -47,7 +52,21 @@ class LoginController: UIViewController {
             }
             if let data = data{
                 do{
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as AnyObject
+                    print(json)
+                    
+                    if let usr = json as? [String: AnyObject]{
+                        self.user = usr
+                        print(self.user["status"] as? String ?? "gamau cuk")
+                        DispatchQueue.main.async {
+                            if(self.user["status"] as? String ?? "" == "Confirm"){
+                                self.performSegue(withIdentifier: "MainMenuUserVC", sender: self)
+                            }else{
+                                print("Gamau CUk")
+                            }
+                        }
+                        
+                    }
                 }
                 catch{
                     print(error)
@@ -58,5 +77,11 @@ class LoginController: UIViewController {
     func textFieldShouldReturn(textField: UITextField) -> Bool{
         textField.resignFirstResponder()
         return true
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "MainMenuUserVC"){
+            let destination = segue.destination as? MainMenuUserController
+            destination!.userId = user["id"] as? String ?? ""
+        }
     }
 }
