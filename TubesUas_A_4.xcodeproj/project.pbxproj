@@ -36,6 +36,7 @@
 		9839C55E2382744D009BA215 /* UserEventDeskripsiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C55D2382744D009BA215 /* UserEventDeskripsiController.swift */; };
 		9839C5602382745E009BA215 /* UserKonfirmasiPembelianController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C55F2382745E009BA215 /* UserKonfirmasiPembelianController.swift */; };
 		9839C5622382749D009BA215 /* UserKonfirmasiRegistrasiEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C5612382749D009BA215 /* UserKonfirmasiRegistrasiEventController.swift */; };
+		D8624BCA23863D4D002314AC /* AdminProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8624BC923863D4D002314AC /* AdminProfileController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		9839C55D2382744D009BA215 /* UserEventDeskripsiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventDeskripsiController.swift; sourceTree = "<group>"; };
 		9839C55F2382745E009BA215 /* UserKonfirmasiPembelianController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKonfirmasiPembelianController.swift; sourceTree = "<group>"; };
 		9839C5612382749D009BA215 /* UserKonfirmasiRegistrasiEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKonfirmasiRegistrasiEventController.swift; sourceTree = "<group>"; };
+		D8624BC923863D4D002314AC /* AdminProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProfileController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				9839C543238263FA009BA215 /* AdminDaftarEventController.swift */,
 				9839C54523826409009BA215 /* AdminDaftarUserController.swift */,
 				9839C5472382645E009BA215 /* AdminConfrimEventController.swift */,
+				D8624BC923863D4D002314AC /* AdminProfileController.swift */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				59D58699237E8E3200790B6B /* DashboardController.swift in Sources */,
 				59D586C5237EA40600790B6B /* UserEditProfileController.swift in Sources */,
 				9839C542238263E0009BA215 /* AdminMenungguConfirmEventController.swift in Sources */,
+				D8624BCA23863D4D002314AC /* AdminProfileController.swift in Sources */,
 				59D586C3237EA3EC00790B6B /* UserProfileController.swift in Sources */,
 				9839C55423827368009BA215 /* UserDaftarTransaksiController.swift in Sources */,
 				9839C55E2382744D009BA215 /* UserEventDeskripsiController.swift in Sources */,

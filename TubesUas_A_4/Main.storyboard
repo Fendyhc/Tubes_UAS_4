@@ -1055,6 +1055,46 @@
             </objects>
             <point key="canvasLocation" x="-2119" y="2188"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="VzR-sc-MZU">
+            <objects>
+                <viewController id="Sc2-yC-mWs" customClass="AdminProfileController" customModule="TubesUas_A_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5N6-yd-Gex">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ANDA LOGIN SEBAGAI ADMIN" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXq-zl-ZvD">
+                                <rect key="frame" x="18" y="246" width="378" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4t-ip-kbe">
+                                <rect key="frame" x="18" y="447" width="376" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <state key="normal" title="LOGOUT">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="LogoutBtn:" destination="Sc2-yC-mWs" eventType="touchUpInside" id="4gx-PT-Fdh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58154642581939697" green="0.57146859169006348" blue="0.94573765993118286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="0um-0Z-QQG"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="person.crop.rectangle" catalog="system" id="MLY-ub-qaX"/>
+                    <connections>
+                        <segue destination="zTR-ex-INV" kind="presentation" identifier="AdminLogoutVC" modalPresentationStyle="fullScreen" id="I5G-AR-hrW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dwn-22-UGc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1007.2463768115942" y="2187.7232142857142"/>
+        </scene>
         <!--Event Confirmation-->
         <scene sceneID="e38-CD-6S8">
             <objects>
@@ -1318,6 +1358,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="CancelAdminBtn:" destination="GG0-CE-2IS" eventType="touchUpInside" id="8K9-VD-0Tv"/>
                                     <action selector="CancelBtn:" destination="Lhd-Jm-fH6" eventType="touchUpInside" id="D2Y-Ox-ZDm"/>
                                 </connections>
                             </button>
@@ -1330,6 +1371,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="ConfirmAdminBtn:" destination="GG0-CE-2IS" eventType="touchUpInside" id="x8b-C0-jY9"/>
                                     <action selector="RegisterBtn:" destination="Lhd-Jm-fH6" eventType="touchUpInside" id="thY-VU-lG1"/>
                                 </connections>
                             </button>
@@ -1338,7 +1380,7 @@
                         <viewLayoutGuide key="safeArea" id="fUZ-Rp-Ojl"/>
                     </view>
                     <connections>
-                        <segue destination="1lT-ZW-4cu" kind="presentation" modalPresentationStyle="fullScreen" id="mnH-4S-5gE"/>
+                        <segue destination="1lT-ZW-4cu" kind="presentation" identifier="AdminConfirmEventVC" modalPresentationStyle="fullScreen" id="mnH-4S-5gE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KrZ-iy-D7r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1358,6 +1400,7 @@
                         <segue destination="1lT-ZW-4cu" kind="relationship" relationship="viewControllers" id="u5w-FH-pvz"/>
                         <segue destination="NOm-HD-eFK" kind="relationship" relationship="viewControllers" id="lVb-nN-w9L"/>
                         <segue destination="hof-AD-Ww1" kind="relationship" relationship="viewControllers" id="FKc-19-hGf"/>
+                        <segue destination="Sc2-yC-mWs" kind="relationship" relationship="viewControllers" id="C00-dQ-HCu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BE-gh-S65" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1472,6 +1515,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="EO" image="person.2.fill" catalog="system" id="SmV-sg-Fth"/>
                     <connections>
+                        <outlet property="PasswordEO" destination="sts-vr-77u" id="pR8-OV-iRf"/>
+                        <outlet property="UsernameEO" destination="3pT-FP-cya" id="mlz-i3-0sJ"/>
                         <segue destination="FZ2-D2-XRr" kind="presentation" identifier="MainMenuAdminVC" modalPresentationStyle="fullScreen" id="8Pu-4K-kGq"/>
                     </connections>
                 </viewController>
@@ -3056,19 +3101,18 @@
         <image name="person.3.fill" catalog="system" width="71" height="34"/>
         <image name="person.crop.circle" catalog="system" width="64" height="60"/>
         <image name="person.crop.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="person.crop.rectangle" catalog="system" width="64" height="46"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="rectangle.stack.person.crop" catalog="system" width="64" height="60"/>
         <image name="tag" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0yh-LE-ycG"/>
-        <segue reference="NZ5-f0-PvI"/>
         <segue reference="Fx0-du-g3U"/>
         <segue reference="jpQ-n8-4yg"/>
         <segue reference="R7j-1I-F1m"/>
         <segue reference="E1p-Cx-Ub1"/>
-        <segue reference="fzg-YN-oMP"/>
-        <segue reference="mnH-4S-5gE"/>
+        <segue reference="I5G-AR-hrW"/>
+        <segue reference="u5w-FH-pvz"/>
         <segue reference="GLI-hc-1ky"/>
         <segue reference="BqR-NA-HyX"/>
         <segue reference="t4R-ay-c4H"/>

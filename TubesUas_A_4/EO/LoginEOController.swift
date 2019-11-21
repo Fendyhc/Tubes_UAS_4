@@ -10,6 +10,8 @@ import UIKit
 
 class LoginEOController: UIViewController {
 
+    @IBOutlet weak var UsernameEO: UITextField!
+    @IBOutlet weak var PasswordEO: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,7 +20,12 @@ class LoginEOController: UIViewController {
     
 
     @IBAction func LoginBtn(_ sender: Any) {
-        performSegue(withIdentifier: "MainMenuEOVC", sender: self)
+        if UsernameEO.text == "admin" && PasswordEO.text == "admin" {
+            performSegue(withIdentifier: "MainMenuAdminVC", sender: self)
+        }else{
+            performSegue(withIdentifier: "MainMenuEOVC", sender: self)
+        }
+        
     }
     
 
