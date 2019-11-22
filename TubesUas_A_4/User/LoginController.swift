@@ -7,11 +7,16 @@
 //
 
 import UIKit
-
+import Alamofire
+import SwiftyJSON
+struct Response: Decodable {
+    var id: String!
+    var status: String!
+}
 class LoginController: UIViewController {
     //test ary
     let URL_Login = "https://uajytix.xyz/REST-API/user/login.php"
-    var user:[String:AnyObject] = [:]
+    var user:Response? = nil
     @IBOutlet weak var Passwordtxt: UITextField!
     @IBOutlet weak var Usernametxt: UITextField!
     override func viewDidLoad() {
@@ -23,56 +28,35 @@ class LoginController: UIViewController {
         if Usernametxt.text == "admin" && Passwordtxt.text == "admin" {
             performSegue(withIdentifier: "MainMenuAdminVC", sender: self)
         }else{
-            postPegawai(username: Usernametxt.text ?? "", password: Passwordtxt.text ?? "")
+            let params = [
+                "username" : Usernametxt.text ?? "",
+                "password" : Passwordtxt.text ?? ""
+            ]
+            var request = URLRequest(url: URL(string: URL_Login)!)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+            request.httpBody = try! JSONSerialization.data(withJSONObject: params)
+            Alamofire.request(request).responseJSON{
+                response in
+                print(JSON(response.result.value!))
+                let statusCode = response.response?.statusCode
+                if(statusCode == 200){
+                    do{
+                        let decoder = try JSONDecoder().decode(Response.self, from: response.data!)
+                        self.user = decoder
+                        self.pindah()
+                    }catch{
+                        print(Error.self)
+                    }
+                }
+            }
         }
         
     }
     
     @IBAction func SignUpBtn(_ sender: Any) {
         performSegue(withIdentifier: "RegisterVC", sender: self)
-    }
-    fileprivate func postPegawai(username: String, password: String){
-        let parameters : [String:Any] = ["username":username, "password":password]
-        guard let url = URL(string: URL_Login)else{
-            return
-        }
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: [])else{
-            return
-        }
-        request.httpBody = httpBody
-        
-        let session = URLSession.shared
-        session.dataTask(with: request){
-            (data,response,err) in
-            if let response = response{
-                print(response)
-            }
-            if let data = data{
-                do{
-                    let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as AnyObject
-                    print(json)
-                    
-                    if let usr = json as? [String: AnyObject]{
-                        self.user = usr
-                        print(self.user["status"] as? String ?? "gamau cuk")
-                        DispatchQueue.main.async {
-                            if(self.user["status"] as? String ?? "" == "Confirm"){
-                                self.performSegue(withIdentifier: "MainMenuUserVC", sender: self)
-                            }else{
-                                print("Gamau CUk")
-                            }
-                        }
-                        
-                    }
-                }
-                catch{
-                    print(error)
-                }
-            }
-        }.resume()
     }
     func textFieldShouldReturn(textField: UITextField) -> Bool{
         textField.resignFirstResponder()
@@ -81,7 +65,10 @@ class LoginController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "MainMenuUserVC"){
             let destination = segue.destination as? MainMenuUserController
-            destination!.userId = user["id"] as? String ?? ""
+            destination!.userId = user!.id
         }
+    }
+    func pindah(){
+        performSegue(withIdentifier: "MainMenuUserVC", sender: self)
     }
 }

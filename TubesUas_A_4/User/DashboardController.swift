@@ -7,7 +7,19 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
+
+struct FailableDecodable<Base : Decodable> : Decodable {
+
+    let base: Base?
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        self.base = try? container.decode(Base.self)
+    }
+}
 class DashboardController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     let URL_Get_Event = "https://uajytix.xyz/REST-API/event/viewAll.php"
     @IBOutlet weak var tableEvent: UITableView!
@@ -26,7 +38,6 @@ class DashboardController: UIViewController,UITableViewDelegate,UITableViewDataS
         getJson(urlString: URL_Get_Event)
         tableEvent.delegate=self
         tableEvent.dataSource=self
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func RegisterBtn(_ sender: Any) {
@@ -47,37 +58,30 @@ class DashboardController: UIViewController,UITableViewDelegate,UITableViewDataS
         return 1
     }
     fileprivate func getJson(urlString : String){
-        let url = URL(string: urlString)
-        URLSession.shared.dataTask(with: url!) {
-            (data, responds, err) in
-            if err != nil{
-                print("error",err ?? "")
-            }else{
-                if let useable = data{
-                    do{
-                        let jsonObject = try JSONSerialization.jsonObject(with: useable, options: .mutableContainers) as AnyObject
-                        print(jsonObject)
-                        let events = jsonObject as? [AnyObject]
-                        for event in events! {
-                            let e = Event(json: event as! [String:Any])
-                            self.event.append(e)
-                        }
-                        print(self.event[0].nama)
-                        
-                        DispatchQueue.main.async(execute: {
-                            self.tableEvent.reloadData()
-                        })
-                    }
-                    catch{
-                        print("catch error")
-                    }
-                }
+        Alamofire.request(URL_Get_Event, method: .get).responseJSON{ response in
+            do{
+                let products = try JSONDecoder()
+                    .decode([FailableDecodable<Event>].self, from: response.data!)
+                .compactMap { $0.base }
+                self.event = products
+                self.tableEvent.reloadData()
+            }catch _ {
+                print(Error.self)
             }
-        }.resume()
+            
+        }
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if(segue.identifier == "UserRegisterEventVC"){
+            let destination = segue.destination as? RegisterEventController
+            destination!.userId = self.userId
+        }
     }
 }
 

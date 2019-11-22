@@ -240,8 +240,8 @@
                         <viewLayoutGuide key="safeArea" id="dkj-hF-HNY"/>
                     </view>
                     <connections>
-                        <segue destination="5UV-di-FEe" kind="presentation" identifier="BacktoDashboardVC" modalPresentationStyle="fullScreen" id="tg6-3e-xB0"/>
                         <segue destination="dYy-Xx-Lfx" kind="presentation" identifier="UserConfirmRegisterEventVC" modalPresentationStyle="fullScreen" id="Ill-nS-XRN"/>
+                        <segue destination="4v1-LV-L0J" kind="presentation" identifier="BacktoDashboardVC" modalPresentationStyle="fullScreen" id="OAB-cD-0S4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KLl-Bi-g9K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1984,6 +1984,9 @@
                                 <state key="normal" title="REGISTER">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerBtn:" destination="krg-Y1-MVa" eventType="touchUpInside" id="fjS-Pd-eaU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already Have Acount ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNw-Q6-0ns">
                                 <rect key="frame" x="81" y="810" width="185" height="21"/>
@@ -2009,6 +2012,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="zq0-cv-X8K"/>
                     <connections>
+                        <outlet property="confirmPasswordTxt" destination="Mjs-iF-TbS" id="2yt-eJ-SbU"/>
+                        <outlet property="emailTxt" destination="IxQ-qQ-Rjn" id="WVf-aa-N1s"/>
+                        <outlet property="fakultasTxt" destination="lF0-Jy-c4O" id="jDD-Ok-kWF"/>
+                        <outlet property="namaTxt" destination="dIv-zN-iUL" id="bbY-uQ-bki"/>
+                        <outlet property="nomorHpTxt" destination="zpf-mp-uLJ" id="2mZ-9J-Ihz"/>
+                        <outlet property="npmTxt" destination="RuO-km-uUF" id="As0-gX-I9R"/>
+                        <outlet property="passwordTxt" destination="OdH-x0-INU" id="I0N-Xz-O5n"/>
+                        <outlet property="prodiTxt" destination="eWs-xc-Br2" id="EjC-qu-QOR"/>
+                        <outlet property="usernameTxt" destination="0fU-L4-3gg" id="lAz-c7-KGJ"/>
                         <segue destination="wew-1x-8sP" kind="presentation" identifier="LoginUserVC" modalPresentationStyle="fullScreen" id="ZOs-c4-g1f"/>
                     </connections>
                 </viewController>
@@ -3130,10 +3142,11 @@
         <segue reference="Fx0-du-g3U"/>
         <segue reference="dd8-I1-GaD"/>
         <segue reference="e0k-lr-MBt"/>
-        <segue reference="E1p-Cx-Ub1"/>
+        <segue reference="ZOs-c4-g1f"/>
         <segue reference="I5G-AR-hrW"/>
         <segue reference="u5w-FH-pvz"/>
         <segue reference="GLI-hc-1ky"/>
+        <segue reference="OAB-cD-0S4"/>
         <segue reference="GRH-3j-kkv"/>
         <segue reference="Iym-ao-vzg"/>
         <segue reference="xff-D2-Qkj"/>

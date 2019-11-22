@@ -22,5 +22,11 @@ class RegisterEventController: UIViewController {
     @IBAction func CancelBtn(_ sender: Any) {
         performSegue(withIdentifier: "BacktoDashboardVC", sender: self.dismiss(animated: true, completion: nil))
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       if(segue.identifier == "BacktoDashboardVC"){
+            let destination = segue.destination as? MainMenuUserController
+            destination!.userId = self.userId
+        }
+    }
     
 }

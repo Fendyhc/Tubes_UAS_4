@@ -7,7 +7,8 @@
 //
 
 import Foundation
-class Event: NSObject {
+import Alamofire
+class Event: Decodable {
     var id:String;
     var nama:String;
     var kategori:String;
@@ -19,18 +20,4 @@ class Event: NSObject {
     var no_rek:String;
     var nama_rek:String;
     var bank_rek:String;
-    
-    init(json:[String:Any]){
-        self.id=json["id"] as? String ?? ""
-        self.nama=json["nama"] as? String ?? ""
-        self.kategori=json["kategori"] as? String ?? ""
-        self.penyelenggara=json["penyelenggara"] as? String ?? ""
-        self.tempat=json["tempat"] as? String ?? ""
-        self.waktu=json["waktu"] as? String ?? ""
-        self.deskripsi=json["deskripsi"] as? String ?? ""
-        self.harga=json["harga"] as? String ?? ""
-        self.no_rek=json["no_rek"] as? String ?? ""
-        self.nama_rek=json["nama_rek"] as? String ?? ""
-        self.bank_rek=json["bank_rek"] as? String ?? ""
-    }
 }
