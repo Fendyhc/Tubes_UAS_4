@@ -20,12 +20,28 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="tmm-8L-8r6">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="CX7-CR-VUW" detailTextLabel="7H1-bB-WtR" style="IBUITableViewCellStyleSubtitle" id="tmm-8L-8r6" customClass="userChartCell" customModule="TubesUas_A_4" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tmm-8L-8r6" id="nRi-aM-Eg5">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CX7-CR-VUW">
+                                                    <rect key="frame" x="20.000000000000004" y="8.9999999999999982" width="33.333333333333336" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7H1-bB-WtR">
+                                                    <rect key="frame" x="19.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -48,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rxp-7A-HBO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2532" y="-318"/>
+            <point key="canvasLocation" x="2531.8840579710145" y="-318.08035714285711"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="yEW-dR-PnX">
@@ -82,21 +98,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="mycell" textLabel="V0Z-D1-HP0" detailTextLabel="czW-Ks-Lux" style="IBUITableViewCellStyleSubtitle" id="rbE-qO-27d">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="mycell" textLabel="mRa-ea-GxR" detailTextLabel="0jg-gb-60H" style="IBUITableViewCellStyleSubtitle" id="rbE-qO-27d">
                                         <rect key="frame" x="0.0" y="28" width="414" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rbE-qO-27d" id="5as-NJ-qIW">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V0Z-D1-HP0">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mRa-ea-GxR">
                                                     <rect key="frame" x="20.000000000000004" y="8.9999999999999982" width="33.333333333333336" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="czW-Ks-Lux">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0jg-gb-60H">
                                                     <rect key="frame" x="19.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -118,7 +134,7 @@
                     <connections>
                         <outlet property="tableEvent" destination="P8E-aQ-wCW" id="9Ss-8A-eFG"/>
                         <segue destination="Lhd-Jm-fH6" kind="presentation" identifier="UserRegisterEventVC" modalPresentationStyle="fullScreen" id="GRH-3j-kkv"/>
-                        <segue destination="nP7-dH-HI7" kind="presentation" modalPresentationStyle="fullScreen" id="pNR-lV-yr4"/>
+                        <segue destination="nP7-dH-HI7" kind="presentation" identifier="eventDetailVC" modalPresentationStyle="fullScreen" id="pNR-lV-yr4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="og4-qU-I8L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1556,7 +1572,7 @@
                                 <rect key="frame" x="105" y="460" width="282" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Didn't Have Account ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chC-9P-mZt">
                                 <rect key="frame" x="80" y="625" width="180" height="21"/>
@@ -2205,6 +2221,11 @@
                         <viewLayoutGuide key="safeArea" id="bBN-bk-ZpI"/>
                     </view>
                     <connections>
+                        <outlet property="deskripsiTxt" destination="IIQ-e6-EFg" id="VYr-1K-6mW"/>
+                        <outlet property="hargaTxt" destination="WvS-pq-QWv" id="5kr-9K-bzH"/>
+                        <outlet property="lokasiTxt" destination="HjY-T9-4Sj" id="piG-nD-PAN"/>
+                        <outlet property="namaTxt" destination="bF4-Kb-gaG" id="PfN-Rk-CQj"/>
+                        <outlet property="penyelenggaraTxt" destination="ZmS-Np-IjH" id="FA3-RA-tRa"/>
                         <segue destination="bC6-Hy-4Wa" kind="presentation" modalPresentationStyle="fullScreen" id="iQ4-XQ-1kl"/>
                         <segue destination="5UV-di-FEe" kind="presentation" modalPresentationStyle="fullScreen" id="RLv-hB-v62"/>
                     </connections>
@@ -3139,16 +3160,17 @@
         <image name="tag" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Fx0-du-g3U"/>
+        <segue reference="s8y-32-ckF"/>
+        <segue reference="3Nn-Ec-rKs"/>
         <segue reference="dd8-I1-GaD"/>
         <segue reference="e0k-lr-MBt"/>
         <segue reference="ZOs-c4-g1f"/>
         <segue reference="I5G-AR-hrW"/>
         <segue reference="u5w-FH-pvz"/>
         <segue reference="GLI-hc-1ky"/>
-        <segue reference="OAB-cD-0S4"/>
+        <segue reference="dXd-7r-Li6"/>
         <segue reference="GRH-3j-kkv"/>
-        <segue reference="Iym-ao-vzg"/>
+        <segue reference="RLv-hB-v62"/>
         <segue reference="xff-D2-Qkj"/>
     </inferredMetricsTieBreakers>
 </document>
