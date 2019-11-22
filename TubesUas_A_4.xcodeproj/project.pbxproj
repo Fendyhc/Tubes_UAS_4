@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -190,7 +190,6 @@
 				ED739D4D71576D0D859B0C1F /* Pods-TubesUas_A_4.debug.xcconfig */,
 				F0FE51A79F591BDB4EEF1B3E /* Pods-TubesUas_A_4.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

@@ -25,6 +25,8 @@ class DashboardController: UIViewController,UITableViewDelegate,UITableViewDataS
     @IBOutlet weak var tableEvent: UITableView!
     var userId:String = ""
     var event = [Event]()
+    var eventId:String = ""
+    private let refresControl = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
         print(self.userId)
@@ -38,6 +40,8 @@ class DashboardController: UIViewController,UITableViewDelegate,UITableViewDataS
         getJson(urlString: URL_Get_Event)
         tableEvent.delegate=self
         tableEvent.dataSource=self
+        refresControl.addTarget(self, action: #selector(refreshEventData(_:)), for: .valueChanged)
+        self.tableEvent.addSubview(self.refresControl)
     }
     
     @IBAction func RegisterBtn(_ sender: Any) {
@@ -46,7 +50,10 @@ class DashboardController: UIViewController,UITableViewDelegate,UITableViewDataS
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return event.count
     }
-    
+    @objc private func refreshEventData(_ sender: Any){
+        getJson(urlString: self.URL_Get_Event)
+        self.refresControl.endRefreshing()
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mycell", for: indexPath)
         cell.textLabel?.text = event[indexPath.row].nama
@@ -71,8 +78,15 @@ class DashboardController: UIViewController,UITableViewDelegate,UITableViewDataS
             
         }
     }
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+   func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    let contextItem = UIContextualAction(style: .normal, title: "event detail") {  (contextualAction, view, boolValue) in
+            self.eventId = self.event[indexPath.row].id
+            self.pindah()
+        }
+        let swipeActions = UISwipeActionsConfiguration(actions: [contextItem])
+    contextItem.backgroundColor = UIColor.blue
         
+        return swipeActions
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -82,6 +96,14 @@ class DashboardController: UIViewController,UITableViewDelegate,UITableViewDataS
             let destination = segue.destination as? RegisterEventController
             destination!.userId = self.userId
         }
+        if(segue.identifier == "eventDetailVC"){
+            let destination = segue.destination as? UserEventDeskripsiController
+            destination!.userId = self.userId
+            destination!.eventId = self.eventId
+        }
+    }
+    func pindah(){
+        performSegue(withIdentifier: "eventDetailVC", sender: self)
     }
 }
 
