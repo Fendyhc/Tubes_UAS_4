@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import UIKit
 import Alamofire
 import SwiftyJSON
 
@@ -27,12 +26,13 @@ struct eventResponse: Decodable {
     var harga: String!
 }
 class UserEventDeskripsiController: UIViewController {
+    
+    @IBOutlet weak var waktuTxt: UILabel!
     @IBOutlet weak var namaTxt: UILabel!
     @IBOutlet weak var penyelenggaraTxt: UILabel!
-
+    @IBOutlet weak var lokasiTxt: UILabel!
     @IBOutlet weak var deskripsiTxt: UILabel!
     @IBOutlet weak var hargaTxt: UILabel!
-    @IBOutlet weak var lokasiTxt: UILabel!
     let URL_Get_Event = "https://uajytix.xyz/REST-API/event/searchById.php?id="
     var userId:String = ""
     var eventId:String = ""
@@ -52,12 +52,37 @@ class UserEventDeskripsiController: UIViewController {
                 do{
                     let decoder = try JSONDecoder().decode(eventResponse.self, from: response.data!)
                     self.eventData = decoder
-                    
+                    print(self.eventData!)
+                    self.setData()
                 }catch{
                     print(Error.self)
                 }
             }
         }
     }
+    func setData(){
+        self.namaTxt.text = self.eventData?.nama
+        self.deskripsiTxt.text = self.eventData?.deskripsi
+        self.penyelenggaraTxt.text = self.eventData?.penyelenggara
+        self.lokasiTxt.text = self.eventData?.tempat
+        self.hargaTxt.text = self.eventData?.harga
+    }
 
+    @IBAction func cancelBtn(_ sender: Any) {
+        performSegue(withIdentifier: "cancelBuyEventDetailVC", sender: self)
+    }
+    @IBAction func buyBtn(_ sender: Any) {
+        performSegue(withIdentifier: "confirmBuyVC", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "confirmBuyVC"){
+            let destination = segue.destination as? UserKonfirmasiPembelianController
+            destination!.userId = self.userId
+            destination!.eventId = self.eventId
+        }
+        if(segue.identifier == "cancelBuyEventDetailVC"){
+            let destination = segue.destination as? MainMenuUserController
+            destination!.userId = self.userId
+        }
+    }
 }

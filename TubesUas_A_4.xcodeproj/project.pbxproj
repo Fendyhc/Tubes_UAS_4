@@ -18,7 +18,6 @@
 		59D586C1237E98A100790B6B /* LoginEOController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D586C0237E98A100790B6B /* LoginEOController.swift */; };
 		59D586C3237EA3EC00790B6B /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D586C2237EA3EC00790B6B /* UserProfileController.swift */; };
 		59D586C5237EA40600790B6B /* UserEditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D586C4237EA40600790B6B /* UserEditProfileController.swift */; };
-		972D2BF22387F2EF00F21693 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972D2BF12387F2EF00F21693 /* TableViewCell.swift */; };
 		9839C5402382597A009BA215 /* RegisterEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C53F2382597A009BA215 /* RegisterEventController.swift */; };
 		9839C542238263E0009BA215 /* AdminMenungguConfirmEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C541238263E0009BA215 /* AdminMenungguConfirmEventController.swift */; };
 		9839C544238263FA009BA215 /* AdminDaftarEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C543238263FA009BA215 /* AdminDaftarEventController.swift */; };
@@ -57,7 +56,6 @@
 		59D586C0237E98A100790B6B /* LoginEOController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEOController.swift; sourceTree = "<group>"; };
 		59D586C2237EA3EC00790B6B /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		59D586C4237EA40600790B6B /* UserEditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditProfileController.swift; sourceTree = "<group>"; };
-		972D2BF12387F2EF00F21693 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		9839C53F2382597A009BA215 /* RegisterEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEventController.swift; sourceTree = "<group>"; };
 		9839C541238263E0009BA215 /* AdminMenungguConfirmEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMenungguConfirmEventController.swift; sourceTree = "<group>"; };
 		9839C543238263FA009BA215 /* AdminDaftarEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDaftarEventController.swift; sourceTree = "<group>"; };
@@ -199,7 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				9BFC15E52386F33D00B2FBD4 /* Event.swift */,
-				972D2BF12387F2EF00F21693 /* TableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -334,7 +331,6 @@
 				9BFC15E32386E1EC00B2FBD4 /* MainMenuUserController.swift in Sources */,
 				59D586C5237EA40600790B6B /* UserEditProfileController.swift in Sources */,
 				9839C542238263E0009BA215 /* AdminMenungguConfirmEventController.swift in Sources */,
-				972D2BF22387F2EF00F21693 /* TableViewCell.swift in Sources */,
 				D8624BCA23863D4D002314AC /* AdminProfileController.swift in Sources */,
 				59D586C3237EA3EC00790B6B /* UserProfileController.swift in Sources */,
 				9839C55423827368009BA215 /* UserDaftarTransaksiController.swift in Sources */,

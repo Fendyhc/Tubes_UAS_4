@@ -43,7 +43,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Cart" image="cart" catalog="system" id="dlh-z9-RBT"/>
                     <connections>
-                        <segue destination="bvD-qB-oJ8" kind="presentation" modalPresentationStyle="fullScreen" id="dd8-I1-GaD"/>
+                        <segue destination="bvD-qB-oJ8" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="dd8-I1-GaD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rxp-7A-HBO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -118,7 +118,7 @@
                     <connections>
                         <outlet property="tableEvent" destination="P8E-aQ-wCW" id="9Ss-8A-eFG"/>
                         <segue destination="Lhd-Jm-fH6" kind="presentation" identifier="UserRegisterEventVC" modalPresentationStyle="fullScreen" id="GRH-3j-kkv"/>
-                        <segue destination="nP7-dH-HI7" kind="presentation" modalPresentationStyle="fullScreen" id="pNR-lV-yr4"/>
+                        <segue destination="nP7-dH-HI7" kind="presentation" identifier="eventDetailVC" modalPresentationStyle="fullScreen" id="pNR-lV-yr4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="og4-qU-I8L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2187,6 +2187,7 @@
                                 </state>
                                 <connections>
                                     <action selector="CancelBtn:" destination="Lhd-Jm-fH6" eventType="touchUpInside" id="zyJ-gt-IUG"/>
+                                    <action selector="cancelBtn:" destination="nP7-dH-HI7" eventType="touchUpInside" id="7eW-GS-Fii"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZU-zp-eSb">
@@ -2199,6 +2200,7 @@
                                 </state>
                                 <connections>
                                     <action selector="RegisterBtn:" destination="Lhd-Jm-fH6" eventType="touchUpInside" id="7Ra-0H-BGJ"/>
+                                    <action selector="buyBtn:" destination="nP7-dH-HI7" eventType="touchUpInside" id="Alc-iL-Puo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2206,8 +2208,14 @@
                         <viewLayoutGuide key="safeArea" id="bBN-bk-ZpI"/>
                     </view>
                     <connections>
-                        <segue destination="bC6-Hy-4Wa" kind="presentation" modalPresentationStyle="fullScreen" id="iQ4-XQ-1kl"/>
-                        <segue destination="5UV-di-FEe" kind="presentation" modalPresentationStyle="fullScreen" id="RLv-hB-v62"/>
+                        <outlet property="deskripsiTxt" destination="IIQ-e6-EFg" id="4rd-QV-rra"/>
+                        <outlet property="hargaTxt" destination="WvS-pq-QWv" id="hLL-Y6-Pya"/>
+                        <outlet property="lokasiTxt" destination="HjY-T9-4Sj" id="Dff-ht-EuF"/>
+                        <outlet property="namaTxt" destination="bF4-Kb-gaG" id="7o0-Be-JnQ"/>
+                        <outlet property="penyelenggaraTxt" destination="ZmS-Np-IjH" id="ll6-aL-OUL"/>
+                        <outlet property="waktuTxt" destination="dYM-HF-2XN" id="Ajt-Fw-8pD"/>
+                        <segue destination="bC6-Hy-4Wa" kind="presentation" identifier="confirmBuyVC" modalPresentationStyle="fullScreen" id="iQ4-XQ-1kl"/>
+                        <segue destination="4v1-LV-L0J" kind="presentation" identifier="cancelBuyEventDetailVC" modalPresentationStyle="fullScreen" id="ZRv-Xv-Mtg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NeS-Ts-UX3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2351,6 +2359,7 @@
                                 </state>
                                 <connections>
                                     <action selector="CancelBtn:" destination="Lhd-Jm-fH6" eventType="touchUpInside" id="K96-mE-fhD"/>
+                                    <action selector="cancelBtn:" destination="bC6-Hy-4Wa" eventType="touchUpInside" id="xKs-Cb-NLP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKn-WK-Fp4">
@@ -2363,6 +2372,7 @@
                                 </state>
                                 <connections>
                                     <action selector="RegisterBtn:" destination="Lhd-Jm-fH6" eventType="touchUpInside" id="zqt-Iu-Aiu"/>
+                                    <action selector="confirmBtn:" destination="bC6-Hy-4Wa" eventType="touchUpInside" id="Tv3-QD-9sl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2370,7 +2380,12 @@
                         <viewLayoutGuide key="safeArea" id="rKJ-o6-z5o"/>
                     </view>
                     <connections>
-                        <segue destination="5UV-di-FEe" kind="presentation" modalPresentationStyle="fullScreen" id="Owf-lZ-94R"/>
+                        <outlet property="hargaTxt" destination="Cv2-ck-3dC" id="kgq-US-5fx"/>
+                        <outlet property="namaBankTxt" destination="GHb-h7-6IL" id="4Fd-oj-leS"/>
+                        <outlet property="namaRekText" destination="UYL-1c-o6F" id="at5-eg-tX6"/>
+                        <outlet property="namaTxt" destination="ezy-TR-Lco" id="oc1-WW-V4T"/>
+                        <outlet property="noRekTxt" destination="TGG-aF-DPo" id="EpD-Ne-Wg5"/>
+                        <segue destination="4v1-LV-L0J" kind="presentation" identifier="successBuyVC" modalPresentationStyle="fullScreen" id="HoQ-l4-Vj9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdo-6M-XHW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3140,16 +3155,16 @@
         <image name="tag" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Fx0-du-g3U"/>
+        <segue reference="3Nn-Ec-rKs"/>
         <segue reference="jpQ-n8-4yg"/>
         <segue reference="R7j-1I-F1m"/>
         <segue reference="E1p-Cx-Ub1"/>
         <segue reference="I5G-AR-hrW"/>
         <segue reference="mnH-4S-5gE"/>
         <segue reference="GLI-hc-1ky"/>
-        <segue reference="OAB-cD-0S4"/>
+        <segue reference="ZRv-Xv-Mtg"/>
         <segue reference="BqR-NA-HyX"/>
-        <segue reference="Owf-lZ-94R"/>
+        <segue reference="Iym-ao-vzg"/>
         <segue reference="46o-z7-yeM"/>
     </inferredMetricsTieBreakers>
 </document>

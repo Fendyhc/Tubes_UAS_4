@@ -84,7 +84,8 @@ class DashboardController: UIViewController,UITableViewDelegate,UITableViewDataS
             self.pindah()
         }
         let swipeActions = UISwipeActionsConfiguration(actions: [contextItem])
-        contextItem.backgroundColor = UIColor.green
+    contextItem.backgroundColor = UIColor.blue
+        
         return swipeActions
     }
     override func didReceiveMemoryWarning() {
