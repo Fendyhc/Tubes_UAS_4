@@ -11,15 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 
-struct FailableDecodable<Base : Decodable> : Decodable {
 
-    let base: Base?
-
-    init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        self.base = try? container.decode(Base.self)
-    }
-}
 class DashboardController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     let URL_Get_Event = "https://uajytix.xyz/REST-API/event/viewAll.php"
     @IBOutlet weak var tableEvent: UITableView!
@@ -37,6 +29,7 @@ class DashboardController: UIViewController,UITableViewDelegate,UITableViewDataS
         transaksi!.userId = self.userId
         tiket!.userId = self.userId
         profile!.userId = self.userId
+        
         getJson(urlString: URL_Get_Event)
         tableEvent.delegate=self
         tableEvent.dataSource=self
