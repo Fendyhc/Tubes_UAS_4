@@ -17,11 +17,14 @@ class UserKonfirmasiPembelianController: UIViewController {
     var eventData:eventResponse? = nil
     let URL_Get_Event = "https://uajytix.xyz/REST-API/event/searchById.php?id="
     let URL_Post = "https://uajytix.xyz/REST-API/transaksi/create.php"
+  
+    
+    
+    @IBOutlet weak var noRekTxt: UILabel!
+    @IBOutlet weak var namaTxt: UILabel!
+    @IBOutlet weak var namaRekText: UILabel!
     @IBOutlet weak var hargaTxt: UILabel!
     @IBOutlet weak var namaBankTxt: UILabel!
-    @IBOutlet weak var namaTxt: UILabel!
-    @IBOutlet weak var noRekTxt: UILabel!
-    @IBOutlet weak var namaRekText: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getData()
@@ -44,22 +47,7 @@ class UserKonfirmasiPembelianController: UIViewController {
             }
         }
     }
-    @IBAction func confirmBtn(_ sender: Any) {
-        let params = [
-            "id_user":self.userId,
-            "id_event":self.eventId
-        ]
-        var request = URLRequest(url: URL(string: URL_Post)!)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = try! JSONSerialization.data(withJSONObject: params)
-        Alamofire.request(request).responseJSON{
-            response in
-            if response.result.isSuccess{
-                self.pindah()
-            }
-        }
-    }
+
     func setData(){
         self.namaTxt.text = self.eventData?.nama
         self.namaBankTxt.text = self.eventData?.bank_rek
@@ -76,6 +64,26 @@ class UserKonfirmasiPembelianController: UIViewController {
             destination!.userId = self.userId
         }
     }
+
+    
+    @IBAction func confirmBtn(_ sender: Any) {
+        let params = [
+            "id_user":self.userId,
+            "id_event":self.eventId
+        ]
+        var request = URLRequest(url: URL(string: URL_Post)!)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try! JSONSerialization.data(withJSONObject: params)
+        Alamofire.request(request).responseJSON{
+            response in
+            if response.result.isSuccess{
+                print(JSON(response.result.value!))
+                self.pindah()
+            }
+        }
+    }
+    
     @IBAction func cancelBtn(_ sender: Any) {
         self.pindah()
     }
