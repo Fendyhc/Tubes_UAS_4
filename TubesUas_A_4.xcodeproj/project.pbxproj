@@ -66,7 +66,7 @@
 		9839C54D238267FF009BA215 /* EOProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOProfileController.swift; sourceTree = "<group>"; };
 		9839C54F238272F5009BA215 /* EOEditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOEditProfileController.swift; sourceTree = "<group>"; };
 		9839C55123827340009BA215 /* UserMyTicketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMyTicketController.swift; sourceTree = "<group>"; };
-		9839C55323827368009BA215 /* UserDaftarTransaksiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDaftarTransaksiController.swift; sourceTree = "<group>"; };
+		9839C55323827368009BA215 /* UserDaftarTransaksiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDaftarTransaksiController.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		9839C5552382738E009BA215 /* UserConfirmPembayaran1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfirmPembayaran1Controller.swift; sourceTree = "<group>"; };
 		9839C557238273A0009BA215 /* UserConfirmPembayaran2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfirmPembayaran2Controller.swift; sourceTree = "<group>"; };
 		9839C559238273CB009BA215 /* UserDetailPembayaranController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailPembayaranController.swift; sourceTree = "<group>"; };

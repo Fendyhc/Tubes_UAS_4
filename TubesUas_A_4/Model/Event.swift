@@ -56,3 +56,21 @@ class detilTransaksi: Decodable {
     var nama_rek_user:String;
     var status:String;
 }
+class userTicket: Decodable {
+    var nama_event:String;
+    var kategori:String;
+    var penyelenggara:String;
+    var tempat:String;
+    var waktu:String;
+}
+class user: Decodable{
+    var id:String;
+    var nama:String;
+    var npm:String;
+    var fakultas:String;
+    var prodi:String;
+    var telp:String;
+    var email:String;
+    var username:String;
+    var password:String;
+}

@@ -43,10 +43,25 @@ class UserDetailPembayaranController: UIViewController {
         performSegue(withIdentifier: "cancelEditDetilVC", sender: self)
     }
     
+    @IBAction func editBtn(_ sender: Any) {
+        performSegue(withIdentifier: "formEditDetilVC", sender: self )
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "cancelEditDetilVC"){
             let destination = segue.destination as? MainMenuUserController
             destination?.userId = self.userId
+        }
+        if(segue.identifier == "formEditDetilVC"){
+            let destination = segue.destination as? UserEditPembayaranController
+            destination?.userId =  self.userId
+            destination?.transaksiId = self.transaksiId
+            destination?.namaRek = self.namaRek
+            destination?.nama = self.nama
+            destination?.bankRek = self.bankRek
+            destination?.noRek = self.noRek
+            destination?.harga = self.harga
+            destination?.namaRekUsr = self.namaRekUsr
+            destination?.noRekUsr = self.noRekUsr
         }
     }
     /*

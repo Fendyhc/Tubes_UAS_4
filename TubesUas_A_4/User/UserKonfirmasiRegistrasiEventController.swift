@@ -9,10 +9,40 @@
 import UIKit
 
 class UserKonfirmasiRegistrasiEventController: UIViewController {
-
+    var userId:String=""
+    var nama:String=""
+    var email:String=""
+    var password:String=""
+    var username:String=""
+    var namaRek:String=""
+    var bank:String=""
+    var noRek:String=""
+    var harga:String=""
+    var penyelenggara:String=""
+    var tempat:String=""
+    var waktu:String=""
+    var deskripsi:String=""
+    @IBOutlet weak var deskripsiTxt: UILabel!
+    @IBOutlet weak var waktuTxt: UILabel!
+    @IBOutlet weak var tempatTxt: UILabel!
+    @IBOutlet weak var penyelenggaraTxt: UILabel!
+    @IBOutlet weak var namaTxt: UILabel!
+    @IBOutlet weak var namaRekTxt: UILabel!
+    @IBOutlet weak var hargaTxt: UILabel!
+    @IBOutlet weak var noRekTxt: UILabel!
+    @IBOutlet weak var bankTxt: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.deskripsiTxt.text = self.deskripsi
+        self.waktuTxt.text = self.waktu
+        self.tempatTxt.text = self.tempat
+        self.penyelenggaraTxt.text = self.penyelenggara
+        self.namaTxt.text = self.nama
+        self.namaRekTxt.text = self.namaRek
+        self.hargaTxt.text = self.harga
+        self.noRekTxt.text = self.noRek
+        self.bankTxt.text = self.bank
         // Do any additional setup after loading the view.
     }
     
