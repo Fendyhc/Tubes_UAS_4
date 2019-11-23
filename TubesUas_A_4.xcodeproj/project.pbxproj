@@ -36,6 +36,7 @@
 		9839C55E2382744D009BA215 /* UserEventDeskripsiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C55D2382744D009BA215 /* UserEventDeskripsiController.swift */; };
 		9839C5602382745E009BA215 /* UserKonfirmasiPembelianController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C55F2382745E009BA215 /* UserKonfirmasiPembelianController.swift */; };
 		9839C5622382749D009BA215 /* UserKonfirmasiRegistrasiEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9839C5612382749D009BA215 /* UserKonfirmasiRegistrasiEventController.swift */; };
+		9B5A321A2389C3D0007A1DAD /* MainMenuEO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5A32192389C3D0007A1DAD /* MainMenuEO.swift */; };
 		9BFC15E32386E1EC00B2FBD4 /* MainMenuUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC15E22386E1EC00B2FBD4 /* MainMenuUserController.swift */; };
 		9BFC15E62386F33D00B2FBD4 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC15E52386F33D00B2FBD4 /* Event.swift */; };
 		D8624BCA23863D4D002314AC /* AdminProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8624BC923863D4D002314AC /* AdminProfileController.swift */; };
@@ -75,6 +76,7 @@
 		9839C55F2382745E009BA215 /* UserKonfirmasiPembelianController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKonfirmasiPembelianController.swift; sourceTree = "<group>"; };
 		9839C5612382749D009BA215 /* UserKonfirmasiRegistrasiEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserKonfirmasiRegistrasiEventController.swift; sourceTree = "<group>"; };
 		9A6603CE5BCD8B6257CE57D5 /* Pods_TubesUas_A_4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TubesUas_A_4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B5A32192389C3D0007A1DAD /* MainMenuEO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuEO.swift; sourceTree = "<group>"; };
 		9BFC15E22386E1EC00B2FBD4 /* MainMenuUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuUserController.swift; sourceTree = "<group>"; };
 		9BFC15E52386F33D00B2FBD4 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		D8624BC923863D4D002314AC /* AdminProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProfileController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				9839C54B238267E8009BA215 /* DaftarPesertaEOController.swift */,
 				9839C54D238267FF009BA215 /* EOProfileController.swift */,
 				9839C54F238272F5009BA215 /* EOEditProfileController.swift */,
+				9B5A32192389C3D0007A1DAD /* MainMenuEO.swift */,
 			);
 			path = EO;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				59D58695237E8C7400790B6B /* RegisterController.swift in Sources */,
 				59D586C1237E98A100790B6B /* LoginEOController.swift in Sources */,
 				9839C5562382738E009BA215 /* UserConfirmPembayaran1Controller.swift in Sources */,
+				9B5A321A2389C3D0007A1DAD /* MainMenuEO.swift in Sources */,
 				9839C558238273A0009BA215 /* UserConfirmPembayaran2Controller.swift in Sources */,
 				59A4BDC2237D4BD70012F801 /* AppDelegate.swift in Sources */,
 				9839C5482382645E009BA215 /* AdminConfrimEventController.swift in Sources */,

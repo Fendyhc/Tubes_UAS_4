@@ -20,6 +20,7 @@ class Event: Decodable {
     var no_rek:String;
     var nama_rek:String;
     var bank_rek:String;
+    var status:String;
 }
 struct FailableDecodable<Base : Decodable> : Decodable {
 
@@ -73,4 +74,29 @@ class user: Decodable{
     var email:String;
     var username:String;
     var password:String;
+}
+class userGet: Decodable{
+    var id:String;
+    var nama:String;
+    var npm:String;
+    var fakultas:String;
+    var prodi:String;
+    var telp:String;
+    var email:String;
+}
+class eventTicket: Decodable{
+    var nama_user:String;
+    var npm:String;
+    var telp:String;
+    var email:String;
+    
+}
+class transaksiEvent: Decodable{
+    var id:String;
+    var nama_user:String;
+    var npm_user:String;
+    var no_telp:String;
+    var no_rek:String;
+    var nama_rek:String
+    var status:String
 }

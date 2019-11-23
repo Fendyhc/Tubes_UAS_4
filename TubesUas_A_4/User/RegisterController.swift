@@ -51,8 +51,19 @@ class RegisterController: UIViewController {
                 response in
                 print(JSON(response.result.value!))
                 let statusCode = response.response?.statusCode
-                if(statusCode == 200){
+                if(statusCode == 201){
+                    let alertController = UIAlertController(title: "Success Register", message:
+                        "Verify your Email", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
+
+                    self.present(alertController, animated: true, completion: nil)
                     print("success!")
+                }else{
+                    let alertController = UIAlertController(title: "Gagal Register", message:
+                        "Periksa Kembali Inputan Anda", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
+
+                    self.present(alertController, animated: true, completion: nil)
                 }
             }
         }

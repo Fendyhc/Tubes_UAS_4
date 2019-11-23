@@ -59,11 +59,18 @@ class DashboardController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     fileprivate func getJson(urlString : String){
         Alamofire.request(URL_Get_Event, method: .get).responseJSON{ response in
+            print(JSON(response.result.value!))
             do{
                 let products = try JSONDecoder()
                     .decode([FailableDecodable<Event>].self, from: response.data!)
                 .compactMap { $0.base }
-                self.event = products
+                var eventTemp=[Event]()
+                for product in products{
+                    if(product.status == "Confirm"){
+                        eventTemp.append(product)
+                    }
+                }
+                self.event = eventTemp
                 self.tableEvent.reloadData()
             }catch _ {
                 print(Error.self)

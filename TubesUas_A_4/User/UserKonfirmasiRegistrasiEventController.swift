@@ -7,8 +7,10 @@
 //
 
 import UIKit
-
+import Alamofire
+import SwiftyJSON
 class UserKonfirmasiRegistrasiEventController: UIViewController {
+    var URL_REGISTER:String = "https://uajytix.xyz/REST-API/event/create.php"
     var userId:String=""
     var nama:String=""
     var email:String=""
@@ -22,6 +24,7 @@ class UserKonfirmasiRegistrasiEventController: UIViewController {
     var tempat:String=""
     var waktu:String=""
     var deskripsi:String=""
+    var kategori:String=""
     @IBOutlet weak var deskripsiTxt: UILabel!
     @IBOutlet weak var waktuTxt: UILabel!
     @IBOutlet weak var tempatTxt: UILabel!
@@ -47,10 +50,67 @@ class UserKonfirmasiRegistrasiEventController: UIViewController {
     }
     
     @IBAction func CancelBtn(_ sender: Any) {
-        performSegue(withIdentifier: "CancelRegisterEventVC", sender: self.dismiss(animated: true, completion: nil))
+        performSegue(withIdentifier: "CancelRegisterEventVC", sender: self)
     }
     
     @IBAction func ConfirmBtn(_ sender: Any) {
-        performSegue(withIdentifier: "UserConfirmRegisterVC", sender: self.dismiss(animated: true, completion: nil))
+                let params = [
+                    "nama":self.nama,
+                    "kategori":self.kategori,
+                    "penyelenggara":self.penyelenggara,
+                    "tempat":self.tempat,
+                    "waktu":self.waktu,
+                    "deskripsi":self.deskripsi,
+                    "harga":self.harga,
+                    "no_rek":self.noRek,
+                    "nama_rek":self.namaRek,
+                    "bank_rek":self.bank,
+                    "username":self.username,
+                    "password":self.password,
+                    "email":self.email
+                ]
+                var request = URLRequest(url: URL(string: URL_REGISTER)!)
+                request.httpMethod = "POST"
+                request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+                request.httpBody = try! JSONSerialization.data(withJSONObject: params)
+                Alamofire.request(request).responseJSON{
+                    response in
+                    print(JSON(response.result.value!))
+                    let statusCode = response.response?.statusCode
+                    if(statusCode == 201){
+                        print("success!")
+                        self.pindah()
+                    }
+            }
+
+    }
+    func pindah(){
+        performSegue(withIdentifier: "UserConfirmRegisterVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "CancelRegisterEventVC"){
+            let destination = segue.destination as? RegisterEventController
+            destination!.userId = self.userId
+            destination!.nama = self.nama
+            destination!.email = self.email
+            destination!.password = self.password
+            destination!.username = self.username
+            destination!.namaRek = self.namaRek
+            destination!.bank = self.bank
+            destination!.noRek = self.noRek
+            destination!.harga = self.harga
+            destination!.penyelenggara = self.penyelenggara
+            destination!.bank = self.bank
+            destination!.tempat = self.tempat
+            destination!.waktu = self.waktu
+            destination!.deskripsi = self.deskripsi
+            destination!.kategori = self.kategori
+        }
+        if(segue.identifier == "UserConfirmRegisterVC"){
+            let destination = segue.destination as? MainMenuUserController
+            destination!.userId = self.userId
+        }
     }
 }

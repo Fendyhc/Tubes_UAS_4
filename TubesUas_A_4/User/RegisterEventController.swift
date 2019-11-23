@@ -23,7 +23,8 @@ class RegisterEventController: UIViewController {
     var tempat:String=""
     var waktu:String=""
     var deskripsi:String=""
-    
+    var kategori:String=""
+    @IBOutlet weak var kategoriTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var usernameTxt: UITextField!
@@ -38,7 +39,21 @@ class RegisterEventController: UIViewController {
     @IBOutlet weak var deskripsiTxt: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.deskripsiTxt.text = self.deskripsi
+        self.waktuTxt.text = self.waktu
+        self.tempatTxt.text = self.tempat
+        self.penyelenggaraTxt.text = self.penyelenggara
+        self.namaTxt.text = self.nama
+        self.namaRekTxt.text = self.namaRek
+        self.kategoriTxt.text = self.kategori
+        self.emailTxt.text = self.email
+        self.passwordTxt.text = self.password
+        self.usernameTxt.text = self.username
+        self.noRekTxt.text = self.noRek
+        self.bankTxt.text = self.bank
+        self.hargaTxt.text = self.harga
+        
+        
         // Do any additional setup after loading the view.
     }
     @IBAction func RegisterBtn(_ sender: Any) {
@@ -54,11 +69,12 @@ class RegisterEventController: UIViewController {
         self.tempat = tempatTxt.text!
         self.waktu = waktuTxt.text!
         self.deskripsi = deskripsiTxt.text!
+        self.kategori = kategoriTxt.text!
         performSegue(withIdentifier: "UserConfirmRegisterEventVC", sender: self)
     }
     
     @IBAction func CancelBtn(_ sender: Any) {
-        performSegue(withIdentifier: "BacktoDashboardVC", sender: self.dismiss(animated: true, completion: nil))
+        performSegue(withIdentifier: "BacktoDashboardVC", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        if(segue.identifier == "BacktoDashboardVC"){
@@ -81,6 +97,7 @@ class RegisterEventController: UIViewController {
             destination!.tempat = self.tempat
             destination!.waktu = self.waktu
             destination!.deskripsi = self.deskripsi
+            destination!.kategori = self.kategori
         }
     }
     
